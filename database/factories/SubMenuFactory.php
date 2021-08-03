@@ -26,7 +26,7 @@ class SubMenuFactory extends Factory
 
         return [
             'name' => $name,
-            'link' => Str::slug($name),
+            'link' => '#',
             'menu_id' => 0,
             'sub_menu_title_id' => 0
         ];

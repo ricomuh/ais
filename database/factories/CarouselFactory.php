@@ -2,18 +2,18 @@
 
 namespace Database\Factories;
 
-use App\Models\Menu;
+use App\Models\Carousel;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
-class MenuFactory extends Factory
+class CarouselFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = Menu::class;
+    protected $model = Carousel::class;
 
     /**
      * Define the model's default state.
@@ -22,11 +22,10 @@ class MenuFactory extends Factory
      */
     public function definition()
     {
-        $name = Str::title($this->faker->words(rand(1, 2)));
-
         return [
-            'name' => $name,
-            'slug' => Str::slug($name),
+            'filename' => rand(1, 3) . '.jpg',
+            'title' => Str::title($this->faker->words(rand(2, 4))),
+            'description' => $this->faker->sentences(rand(1, 3)),
             'link' => '#'
         ];
     }
