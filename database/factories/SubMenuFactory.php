@@ -22,7 +22,7 @@ class SubMenuFactory extends Factory
      */
     public function definition()
     {
-        $name = Str::title($this->faker->words(rand(1, 2)));
+        $name = Str::title($this->faker->words(rand(1, 2), true));
 
         return [
             'name' => $name,

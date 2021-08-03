@@ -22,7 +22,7 @@ class PostFactory extends Factory
      */
     public function definition()
     {
-        $title = Str::title($this->faker->words(rand(3, 9)));
+        $title = Str::title($this->faker->words(rand(3, 9), true));
 
         return [
             'title' => $title,
@@ -31,7 +31,7 @@ class PostFactory extends Factory
             'views' => rand(100, 999),
             'thumbnail' => rand(1, 3) . '.jpg',
             'user_id' => 0,
-            'body' => $this->faker->paragraphs(rand(5, 9))
+            'body' => $this->faker->paragraphs(rand(5, 9), true)
         ];
     }
 }

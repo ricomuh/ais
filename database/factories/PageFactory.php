@@ -22,14 +22,14 @@ class PageFactory extends Factory
      */
     public function definition()
     {
-        $title = Str::title($this->faker->words(rand(2, 5)));
+        $title = Str::title($this->faker->words(rand(2, 5), true));
 
         return [
             'title' => $title,
             'slug' => Str::slug($title),
             'views' => rand(100, 999),
             'menu_id' => 0,
-            'body' => $this->faker->paragraphs(rand(5, 9))
+            'body' => $this->faker->paragraphs(rand(5, 9), true)
         ];
     }
 }

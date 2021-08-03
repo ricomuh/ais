@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\Faq;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 
 class FaqFactory extends Factory
 {
@@ -22,7 +23,7 @@ class FaqFactory extends Factory
     public function definition()
     {
         return [
-            'title' => $this->faker->sentence(rand(4, 8)) . '?',
+            'title' => Str::ucfirst($this->faker->words(rand(4, 8), true) . '?'),
             'body' => $this->faker->paragraphs(rand(3, 5), true)
         ];
     }
