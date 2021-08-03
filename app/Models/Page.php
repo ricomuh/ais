@@ -10,4 +10,9 @@ class Page extends Model
     use HasFactory;
 
     protected $fillable = ['title', 'slug', 'views', 'menu_id', 'body'];
+
+    public function menu()
+    {
+        return $this->belongsTo(Menu::class);
+    }
 }

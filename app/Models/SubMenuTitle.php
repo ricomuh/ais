@@ -12,4 +12,9 @@ class SubMenuTitle extends Model
     public $timestamps = false;
 
     protected $fillable = ['name', 'link', 'menu_id'];
+
+    public function menu()
+    {
+        return $this->belongsTo(Menu::class);
+    }
 }

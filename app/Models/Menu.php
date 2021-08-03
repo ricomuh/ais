@@ -12,4 +12,13 @@ class Menu extends Model
     public $timestamps = false;
 
     protected $fillable = ['name', 'slug', 'link'];
+
+    public function subMenuTitles()
+    {
+        return $this->hasMany(SubMenuTitle::class);
+    }
+    public function subMenus()
+    {
+        return $this->hasMany(SubMenu::class);
+    }
 }

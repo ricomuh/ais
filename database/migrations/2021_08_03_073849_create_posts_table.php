@@ -17,6 +17,7 @@ class CreatePostsTable extends Migration
             $table->id();
             $table->string('title');
             $table->string('slug');
+            $table->foreignId('tag_id')->nullable()->constrained()->nullOnDelete();
             $table->bigInteger('views')->default(0);
             $table->string('thumbnail');
             $table->foreignId('user_id')->constrained()->cascadeOnDelete();
