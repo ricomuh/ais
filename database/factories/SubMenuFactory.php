@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\SubMenu;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 
 class SubMenuFactory extends Factory
 {
@@ -21,8 +22,13 @@ class SubMenuFactory extends Factory
      */
     public function definition()
     {
+        $name = Str::title($this->faker->words(rand(1, 2)));
+
         return [
-            //
+            'name' => $name,
+            'link' => Str::slug($name),
+            'menu_id' => 0,
+            'sub_menu_title_id' => 0
         ];
     }
 }

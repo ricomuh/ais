@@ -2,17 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\Faq;
+use App\Models\Staff;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class FaqFactory extends Factory
+class StaffFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = Faq::class;
+    protected $model = Staff::class;
 
     /**
      * Define the model's default state.
@@ -22,8 +22,11 @@ class FaqFactory extends Factory
     public function definition()
     {
         return [
-            'title' => $this->faker->sentence(rand(4, 8)) . '?',
-            'body' => $this->faker->paragraphs(rand(3, 5), true)
+            'name' => $this->faker->name(),
+            'photo' => rand(1, 7) . '.png',
+            'role' => $this->faker->jobTitle(),
+            'address' => $this->faker->address(),
+            'email' => $this->faker->email()
         ];
     }
 }

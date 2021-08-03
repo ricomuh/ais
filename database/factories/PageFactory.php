@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\Page;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 
 class PageFactory extends Factory
 {
@@ -21,8 +22,14 @@ class PageFactory extends Factory
      */
     public function definition()
     {
+        $title = Str::title($this->faker->words(rand(2, 5)));
+
         return [
-            //
+            'title' => $title,
+            'slug' => Str::slug($title),
+            'views' => rand(100, 999),
+            'menu_id' => 0,
+            'body' => $this->faker->paragraphs(rand(5, 9))
         ];
     }
 }
