@@ -18,7 +18,7 @@ class CreatePagesTable extends Migration
             $table->string('title');
             $table->string('slug')->unique();
             $table->bigInteger('views')->default(0);
-            $table->foreignId('menu_id')->constrained()->onDelete('cascade');
+            $table->foreignId('menu_id')->constrained()->cascadeOnDelete();
             $table->text('body');
             $table->timestamps();
         });

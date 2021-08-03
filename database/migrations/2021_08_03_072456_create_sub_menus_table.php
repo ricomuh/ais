@@ -17,7 +17,7 @@ class CreateSubMenusTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('link');
-            $table->foreignId('menu_id');
+            $table->foreignId('menu_id')->constrained()->onDelete('cascade');
             $table->foreignId('sub_menu_title_id')->constrained()->onDelete('cascade');
         });
     }
