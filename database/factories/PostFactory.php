@@ -3,6 +3,8 @@
 namespace Database\Factories;
 
 use App\Models\Post;
+use App\Models\Tag;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
@@ -27,10 +29,10 @@ class PostFactory extends Factory
         return [
             'title' => $title,
             'slug' => Str::slug($title),
-            'tag_id' => 0,
+            'tag_id' => rand(1, Tag::all()->count()),
             'views' => rand(100, 999),
             'thumbnail' => rand(1, 3) . '.jpg',
-            'user_id' => 0,
+            'user_id' => rand(1, User::all()->count()),
             'body' => $this->faker->paragraphs(rand(5, 9), true)
         ];
     }

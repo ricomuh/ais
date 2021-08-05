@@ -24,9 +24,12 @@ class StaffFactory extends Factory
         return [
             'name' => $this->faker->name(),
             'photo' => rand(1, 7) . '.png',
-            'role' => $this->faker->jobTitle(),
             'address' => $this->faker->address(),
-            'email' => $this->faker->email()
+            'email' => $this->faker->email(),
+            'structural_role' => $this->faker->jobTitle(),
+            'functional_role' => $this->faker->jobTitle(),
+            'formal_education' => $this->faker->paragraphs(rand(2, 4), true),
+            'nonformal_education' => $this->faker->paragraphs(rand(2, 4), true),
         ];
     }
 }

@@ -17,4 +17,9 @@ class SubMenuTitle extends Model
     {
         return $this->belongsTo(Menu::class);
     }
+
+    public function subMenus()
+    {
+        return $this->hasMany(SubMenu::class);
+    }
 }

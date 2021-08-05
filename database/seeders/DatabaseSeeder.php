@@ -17,12 +17,17 @@ class DatabaseSeeder extends Seeder
 
         \App\Models\Carousel::factory(5)->create();
         \App\Models\Faq::factory(rand(5, 10))->create();
+        \App\Models\FooterLink::factory(8)->create();
         \App\Models\Staff::factory(rand(10, 15))->create();
 
         $tags = \App\Models\Tag::factory(5)->create();
-        \App\Models\Post::factory(60)->create([
-            'user_id' => rand(1, $users->count()),
-            'tag_id' => rand(1, $tags->count())
+        \App\Models\Post::factory(60)->create();
+        \App\Models\FeaturedTag::factory(2)->create();
+
+        \App\Models\Menu::create([
+            'name' => 'Home',
+            'slug' => "home",
+            'link' => '/'
         ]);
 
         \App\Models\Menu::factory(4)->create()->each(
@@ -40,9 +45,9 @@ class DatabaseSeeder extends Seeder
                                     'menu_id' => $menu->id
                                 ]);
 
-                                $subMenu->link = $pages->first()->slug;
+                                $subMenu->link = '/page/' . $pages->first()->slug;
                                 $subMenu->save();
-                                $subMenuTitle->link = $pages->first()->slug;
+                                $subMenuTitle->link = '/page/' . $pages->first()->slug;
                                 $subMenuTitle->save();
                             }
                         );
@@ -50,12 +55,18 @@ class DatabaseSeeder extends Seeder
                         if ($subMenus->count() < 1) {
                             $pages = \App\Models\Page::factory(1)->create(['menu_id' => $menu->id]);
 
-                            $subMenuTitle->link = $pages->first()->slug;
+                            $subMenuTitle->link = '/page/' . $pages->first()->slug;
                             $subMenuTitle->save();
                         }
                     }
                 );
             }
         );
+
+        \App\Models\Menu::create([
+            'name' => 'News',
+            'slug' => "news",
+            'link' => 'news'
+        ]);
     }
 }

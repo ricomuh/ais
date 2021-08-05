@@ -2,18 +2,18 @@
 
 namespace Database\Factories;
 
-use App\Models\SubMenu;
+use App\Models\FooterLink;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
-class SubMenuFactory extends Factory
+class FooterLinkFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = SubMenu::class;
+    protected $model = FooterLink::class;
 
     /**
      * Define the model's default state.
@@ -22,13 +22,11 @@ class SubMenuFactory extends Factory
      */
     public function definition()
     {
-        $name = Str::title($this->faker->words(rand(2, 3), true));
+        $name = Str::title($this->faker->words(rand(2, 4), true));
 
         return [
             'name' => $name,
-            'link' => '#',
-            'menu_id' => 0,
-            'sub_menu_title_id' => 0
+            'link' => Str::slug($name)
         ];
     }
 }
