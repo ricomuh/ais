@@ -17,9 +17,12 @@ class CreateStaffTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('photo');
-            $table->string('role');
-            $table->string('address');
+            $table->string('address')->nullable();
             $table->string('email');
+            $table->string('structural_role');
+            $table->string('functional_role')->nullable();
+            $table->text('formal_education')->nullable();
+            $table->text('nonformal_education')->nullable();
             $table->timestamps();
         });
     }

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCarouselsTable extends Migration
+class CreateFeaturedTagsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,11 @@ class CreateCarouselsTable extends Migration
      */
     public function up()
     {
-        Schema::create('carousels', function (Blueprint $table) {
+        Schema::create('featured_tags', function (Blueprint $table) {
             $table->id();
-            $table->string('filename');
-            $table->string('title')->nullable();
-            $table->string('description')->nullable();
-            $table->string('link')->nullable();
+            $table->string('title');
+            $table->string('icon_class');
+            $table->foreignId('tag_id')->constrained()->cascadeOnDelete();
         });
     }
 
@@ -29,6 +28,6 @@ class CreateCarouselsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('carousels');
+        Schema::dropIfExists('featured_tags');
     }
 }
