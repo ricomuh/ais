@@ -28,8 +28,10 @@ class StaffFactory extends Factory
             'email' => $this->faker->email(),
             'structural_role' => $this->faker->jobTitle(),
             'functional_role' => $this->faker->jobTitle(),
-            'formal_education' => $this->faker->paragraphs(rand(2, 4), true),
-            'nonformal_education' => $this->faker->paragraphs(rand(2, 4), true),
+            'formal_educations' => $this->faker->paragraphs(rand(2, 4), true),
+            'nonformal_educations' => $this->faker->paragraphs(rand(2, 4), true),
+            'experiences' => $this->faker->paragraphs(rand(2, 4), true),
+            'publications' => $this->faker->paragraphs(rand(2, 4), true),
         ];
     }
 }

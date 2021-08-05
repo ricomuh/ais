@@ -21,8 +21,10 @@ class CreateStaffTable extends Migration
             $table->string('email');
             $table->string('structural_role');
             $table->string('functional_role')->nullable();
-            $table->text('formal_education')->nullable();
-            $table->text('nonformal_education')->nullable();
+            $table->text('formal_educations')->nullable();
+            $table->text('nonformal_educations')->nullable();
+            $table->text('experiences')->nullable();
+            $table->text('publications')->nullable();
             $table->timestamps();
         });
     }

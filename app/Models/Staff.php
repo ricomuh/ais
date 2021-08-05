@@ -9,5 +9,5 @@ class Staff extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'photo',  'address', 'email', 'structural_role', 'functional_role', 'formal_education', 'nonformal_education'];
+    protected $fillable = ['name', 'photo',  'address', 'email', 'structural_role', 'functional_role', 'formal_educations', 'nonformal_educations', 'experiences', 'publications'];
 }

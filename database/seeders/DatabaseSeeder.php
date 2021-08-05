@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
         \App\Models\Carousel::factory(5)->create();
         \App\Models\Faq::factory(rand(5, 10))->create();
         \App\Models\FooterLink::factory(8)->create();
-        \App\Models\Staff::factory(rand(10, 15))->create();
+        \App\Models\Staff::factory(40)->create();
 
         $tags = \App\Models\Tag::factory(5)->create();
         \App\Models\Post::factory(60)->create();
@@ -30,7 +30,7 @@ class DatabaseSeeder extends Seeder
             'link' => '/'
         ]);
 
-        \App\Models\Menu::factory(4)->create()->each(
+        \App\Models\Menu::factory(3)->create()->each(
             function ($menu) {
                 \App\Models\SubMenuTitle::factory(rand(2, 5))->create([
                     'menu_id' => $menu->id
@@ -63,10 +63,39 @@ class DatabaseSeeder extends Seeder
             }
         );
 
-        \App\Models\Menu::create([
-            'name' => 'News',
-            'slug' => 'news',
-            'link' => '/news'
-        ]);
+        $menus = [
+            // ['name' => 'News', 'slug' => 'news', 'link' => '/news'],
+            [
+                'name' => 'Other', 'slug' => 'other', 'link' => '#', 'children' => [
+                    ['name' => 'Staff', 'link' => '/staff'],
+                    ['name' => 'FAQs', 'link' => '/faqs']
+                ]
+            ],
+            ['name' => 'News', 'slug' => 'news', 'link' => '/news']
+        ];
+
+        collect($menus)->each(function ($menu) {
+            $createdMenu = \App\Models\Menu::create([
+                'name' => $menu['name'],
+                'slug' => $menu['slug'],
+                'link' => $menu['link'],
+            ]);
+            collect($menu['children'] ?? [])->each(function ($subMenuTitle) use ($createdMenu) {
+                \App\Models\SubMenuTitle::create([
+                    'name' => $subMenuTitle['name'],
+                    'link' => $subMenuTitle['link'],
+                    'menu_id' => $createdMenu->id
+                ]);
+                collect($subMenuTitle['children'] ?? [])->each(function ($subMenu) use ($createdMenu) {
+                    \App\Models\SubMenu::create($subMenu);
+                });
+            });
+        });
+
+        // \App\Models\Menu::create([
+        //     'name' => 'News',
+        //     'slug' => 'news',
+        //     'link' => '/news'
+        // ]);
     }
 }
