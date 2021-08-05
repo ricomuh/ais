@@ -36,6 +36,7 @@
             </footer>
             <script src="{{ asset('js/jquery.min.js') }}"></script>
             <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+            <script src="{{ asset('js/script.js') }}"></script>
             @stack('custom-script')
         </div>
     </body>
