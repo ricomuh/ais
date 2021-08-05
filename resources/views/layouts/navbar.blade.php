@@ -7,7 +7,7 @@
             @foreach ($menus as $menu)
                 @if ($menu->subMenuTitles->count())
                     <div x-data="{ open : false }" class="relative group"  @mouseleave="open = false">
-                        <a @mouseover="open = true" id="{{ $menu->slug }}" href="{{ $menu->link }}" class="inline-flex text-primary font-semibold p-4 group-hover:bg-primary group-hover:text-secondary transition">{{ $menu->name }}</a>
+                        <button @mouseover="open = true" id="{{ $menu->slug }}" href="{{ $menu->link }}" class="inline-flex text-primary font-semibold p-4 group-hover:bg-primary group-hover:text-secondary transition">{{ $menu->name }}</button>
                         <div x-show="open" class="absolute origin-top-right right-0 top-full bg-white shadow-md flex flex-col divide-y divide-gray-200 rounded-tr-none"
                         x-transition:enter="transition transform"
                         x-transition:enter-start="opacity-0 -translate-y-4"
@@ -34,7 +34,7 @@
             @endforeach
         </div>
     </div>
-    <div class="flex justify-between md:hidden relative" x-data="{open : false}">
+    <div class="flex justify-between md:hidden relative" x-data="{open : false}" @click.away="open = false">
         <a href="{{ route('home') }}" class="my-auto pl-5">
             <img src="{{ asset('img/header.svg') }}" alt="AIS Header" class="h-8">
         </a>
@@ -44,8 +44,30 @@
                 <path :class="{'hidden': ! open, 'inline-flex': open }" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
             </svg>
         </button>
-        <div class="absolute h-full w-full top-full bg-primary shadow-md flex flex-col" x-show="open">
-            
+        <div class="absolute w-full top-full bg-primary shadow-md flex flex-col" x-show="open">
+            <div class="flex flex-col divide-y divide-secondary divide-opacity-50">
+                @foreach ($menus as $menu)
+                    @if ($menu->subMenuTitles->count())    
+                        <div x-data="{ selected : false }" class="flex flex-col items-center">
+                            <button class="text-secondary font-bold py-2 text-lg w-full" :class="{'bg-primary-dark' : selected}" @click="selected = !selected" @click.away="selected = false" >{{ $menu->name }}</button>
+                            <div class="flex flex-col w-full bg-primary-dark pb-2" x-show="selected">
+                                @foreach ($menu->subMenuTitles as $subMenuTitle)
+                                    <div class="flex flex-col items-center">
+                                        <a href="{{ $subMenuTitle->link }}" class="font-semibold inline-flex text-white">{{ $subMenuTitle->name }}</a>
+                                        <div class="flex flex-col items-center">
+                                            @foreach ($subMenuTitle->subMenus as $subMenu)
+                                                <a href="{{ $subMenu->link }}" class="text-white">{{ $subMenu->name }}</a>
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                @endforeach
+                            </div>
+                        </div>
+                    @else 
+                        <a href="{{ $menu->link }}" class="text-secondary font-bold py-2 text-lg w-full text-center">{{ $menu->name }}</a>
+                    @endif
+                @endforeach
+            </div>
         </div>
     </div>
 </div>
