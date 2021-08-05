@@ -6,8 +6,9 @@
             </a>
             <div class="flex space-x-2 items-center">
                 <span>Share: </span> 
-                <a href="#" class="bg-blue-500 hover:bg-blue-600 transition duration-300 rounded-full w-10 h-10 text-lg flex items-center justify-center text-white shadow hover:shadow-md"><i class="fab fa-facebook"></i></a>
-                <a href="#" class="bg-blue-400 hover:bg-blue-500 transition duration-300 rounded-full w-10 h-10 text-lg flex items-center justify-center text-white shadow hover:shadow-md"><i class="fab fa-twitter"></i></a>
+                <a target="_blank" href="https://api.whatsapp.com/send?text={{ $post->title }} {{ url()->current() }}" class="bg-green-500 hover:bg-green-600 transition duration-300 rounded-full w-10 h-10 text-lg flex items-center justify-center text-white shadow hover:shadow-md"><i class="fab fa-whatsapp"></i></a>
+                <a target="_blank" href="https://www.facebook.com/sharer.php?u={{ url()->current() }}" class="bg-blue-500 hover:bg-blue-600 transition duration-300 rounded-full w-10 h-10 text-lg flex items-center justify-center text-white shadow hover:shadow-md"><i class="fab fa-facebook"></i></a>
+                <a target="_blank" href="https://twitter.com/share?url={{ url()->current() }}&text={{ $post->title }}" class="bg-blue-400 hover:bg-blue-500 transition duration-300 rounded-full w-10 h-10 text-lg flex items-center justify-center text-white shadow hover:shadow-md"><i class="fab fa-twitter"></i></a>
             </div>
         </div>
         <img src="{{ asset('img/thumbnails/' . $post->thumbnail) }}" class="w-full shadow-md rounded-md" alt="">
