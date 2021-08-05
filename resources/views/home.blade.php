@@ -31,7 +31,7 @@
             </div>
         </div>
     </div>
-    <div class="w-10/12 mx-auto my-10 flex flex-col md:flex-row rounded-xl md:justify-between md:items-center md:px-20 md:py-10 px-10 py-5 shadow-lg gap-8" style="background-image: url({{ asset('img/pattern1.png') }}); background-repeat: repeat-x;">
+    <div class="w-10/12 mx-auto my-10 flex flex-col md:flex-row rounded-xl md:justify-between md:items-center md:px-20 md:py-10 px-10 py-5 shadow-lg gap-8" style="background-image: url({{ asset('img/pattern1.png') }}); ">
         <div class="flex flex-col">
             <h2 class="text-3xl font-bold text-secondary">Lorem ipsum dolor sit amet.</h2>
             <p class="text-lg text-white">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel ratione asperiores quibusdam odit magnam facere culpa porro ipsam ad doloremque.</p>
@@ -128,7 +128,7 @@
                                 <x-news-item :post="$post" :h="48" :small="true"/>
                             @endforeach
                         </div>
-                        <a href="#" class="text-secondary font-semibold hover:text-secondary-dark hover:underline">See More...</a>
+                        <a href="{{ route('news.tag', $featuredTag->tag->slug) }}" class="text-secondary font-semibold hover:text-secondary-dark hover:underline">See More...</a>
                     </div>
                 @endforeach
             </div>
