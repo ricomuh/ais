@@ -1,3 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Montserrat:wght@300;500&family=Simonetta:ital@1&display=swap');
+
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+@layer base {
+    .carousel-dot.active {
+        @apply bg-secondary scale-125 !important;
+    }
+    .carousel-dot:not(.active) {
+        @apply bg-primary-dark;
+    }
+    .animate {
+        visibility: hidden;
+    }
+    .animate-from-left, .animate-from-right, .animate-from-bottom {
+        visibility: visible !important;
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+}
