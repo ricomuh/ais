@@ -20,7 +20,10 @@ Route::get('/', HomeController::class)->name('home');
 
 Route::get('/page/{page:slug}', [LandingPageController::class, 'show'])->name('page');
 Route::group(['prefix' => '/news', 'as' => 'news.'], function () {
-    Route::get('/{post:slug}', [NewsController::class, 'show'])->name('read');
+    Route::get('/', [NewsController::class, 'index'])->name('index');
+    Route::get('/search/', [NewsController::class, 'search'])->name('search');
+    Route::get('/tag/{tag:slug}', [NewsController::class, 'tag'])->name('tag');
+    Route::get('/read/{post:slug}', [NewsController::class, 'show'])->name('read');
 });
 
 Route::get('/dashboard', function () {
