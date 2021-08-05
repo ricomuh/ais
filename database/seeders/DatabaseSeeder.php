@@ -65,8 +65,8 @@ class DatabaseSeeder extends Seeder
 
         \App\Models\Menu::create([
             'name' => 'News',
-            'slug' => "news",
-            'link' => 'news'
+            'slug' => 'news',
+            'link' => '/news'
         ]);
     }
 }
