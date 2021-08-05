@@ -1,5 +1,5 @@
 <x-main-layout>
-    <div class="bg-primary pt-8 border-b-4 border-secondary" id="header" style="background-image: url({{ asset('img/pattern1.png') }}); background-repeat: repeat-x; background-attachment: fixed;">
+    <div class="bg-primary pt-8 border-b-4 border-secondary" id="header" style="background-image: url({{ asset('img/pattern1.png') }}); background-attachment: fixed;">
         <div class="w-10/12 mx-auto flex flex-col py-16 space-y-16">
             <div class="">
                 <ul class="flex text-sm lg:text-base">
