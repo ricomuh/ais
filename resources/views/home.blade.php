@@ -57,17 +57,9 @@
             <div class="w-full md:w-3/5 flex flex-col space-y-2 relative animate" data-animate="animate-from-right">
                 <span class="absolute text-7xl bg-primary font-bold w-32 h-32 text-white flex justify-center items-center rounded-full -right-8 md:-right-14 filter opacity-70">?</span>
                 @foreach ($faqs as $faq)
-                    <div class="shadow hover:shadow-md rounded-lg w-full transition duration-300 overflow-hidden transform bg-white bg-opacity-50 backdrop-filter backdrop-blur-sm" x-data="{ open : false }" @click.away="open = false">
-                        <button @click="open = !open" class="py-3 px-5 flex justify-between items-center w-full hover:bg-gray-100 text-left transition duration-300" :class="{'bg-gray-100' : open}">
-                            <h3 class="text-gray-800 font-bold text-xl">{{ $faq->title }}</h3>
-                            <i class="fas fa-caret-right text-xl text-primary" :class="{ 'fa-caret-down' : open, 'fa-caret-right' : !open }"></i>
-                        </button>
-                        <div class="p-5 leading-tight" x-show="open">
-                            <p>{{ $faq->body }}</p>
-                        </div>
-                    </div>
+                    <x-faq-item :faq="$faq" />
                 @endforeach
-                <div><a href="#" class="text-secondary-dark hover:text-secondary transition duration-300 hover:underline ml-3 font-bold">Show More FAQs...</a></div>
+                <div><a href="{{ route('faqs') }}" class="text-secondary-dark hover:text-secondary transition duration-300 hover:underline ml-3 font-bold">Show More FAQs...</a></div>
             </div>
         </div>
     </div>
@@ -134,16 +126,4 @@
             </div>
         </div>
     </div>
-
-    @push('custom-script')
-        <script>
-            $(window).scroll(function(){
-                $(".animate").each(function(){
-                    if ($(this).offset().top < $(window).scrollTop() + 600) {
-                        $(this).addClass($(this).data("animate"));
-                    }
-                });
-            });
-        </script>
-    @endpush
 </x-main-layout>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Faq;
 use App\Models\Page;
 use Illuminate\Http\Request;
 
@@ -29,5 +30,12 @@ class LandingPageController extends Controller
         $page->save();
 
         return view('page', compact('page'));
+    }
+
+    public function faqs()
+    {
+        $faqs = Faq::all();
+
+        return view('faqs', compact('faqs'));
     }
 }
