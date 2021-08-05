@@ -71,6 +71,7 @@ module.exports = {
             opacity: ['disabled','group-hover'],
             translate: ['group-hover'],
             scale: ['group-hover'],
+            blur: ['group-hover'],
             padding: ['hover'],
         },
     },

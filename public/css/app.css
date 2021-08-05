@@ -32730,6 +32730,42 @@ html {
   --tw-blur: blur(64px);
 }
 
+.group:hover .group-hover\:blur-0{
+  --tw-blur: blur(0);
+}
+
+.group:hover .group-hover\:blur-none{
+  --tw-blur: blur(0);
+}
+
+.group:hover .group-hover\:blur-sm{
+  --tw-blur: blur(4px);
+}
+
+.group:hover .group-hover\:blur{
+  --tw-blur: blur(8px);
+}
+
+.group:hover .group-hover\:blur-md{
+  --tw-blur: blur(12px);
+}
+
+.group:hover .group-hover\:blur-lg{
+  --tw-blur: blur(16px);
+}
+
+.group:hover .group-hover\:blur-xl{
+  --tw-blur: blur(24px);
+}
+
+.group:hover .group-hover\:blur-2xl{
+  --tw-blur: blur(40px);
+}
+
+.group:hover .group-hover\:blur-3xl{
+  --tw-blur: blur(64px);
+}
+
 .brightness-0{
   --tw-brightness: brightness(0);
 }
@@ -65087,6 +65123,42 @@ html {
   }
 
   .sm\:blur-3xl{
+    --tw-blur: blur(64px);
+  }
+
+  .group:hover .sm\:group-hover\:blur-0{
+    --tw-blur: blur(0);
+  }
+
+  .group:hover .sm\:group-hover\:blur-none{
+    --tw-blur: blur(0);
+  }
+
+  .group:hover .sm\:group-hover\:blur-sm{
+    --tw-blur: blur(4px);
+  }
+
+  .group:hover .sm\:group-hover\:blur{
+    --tw-blur: blur(8px);
+  }
+
+  .group:hover .sm\:group-hover\:blur-md{
+    --tw-blur: blur(12px);
+  }
+
+  .group:hover .sm\:group-hover\:blur-lg{
+    --tw-blur: blur(16px);
+  }
+
+  .group:hover .sm\:group-hover\:blur-xl{
+    --tw-blur: blur(24px);
+  }
+
+  .group:hover .sm\:group-hover\:blur-2xl{
+    --tw-blur: blur(40px);
+  }
+
+  .group:hover .sm\:group-hover\:blur-3xl{
     --tw-blur: blur(64px);
   }
 
@@ -97451,6 +97523,42 @@ html {
     --tw-blur: blur(64px);
   }
 
+  .group:hover .md\:group-hover\:blur-0{
+    --tw-blur: blur(0);
+  }
+
+  .group:hover .md\:group-hover\:blur-none{
+    --tw-blur: blur(0);
+  }
+
+  .group:hover .md\:group-hover\:blur-sm{
+    --tw-blur: blur(4px);
+  }
+
+  .group:hover .md\:group-hover\:blur{
+    --tw-blur: blur(8px);
+  }
+
+  .group:hover .md\:group-hover\:blur-md{
+    --tw-blur: blur(12px);
+  }
+
+  .group:hover .md\:group-hover\:blur-lg{
+    --tw-blur: blur(16px);
+  }
+
+  .group:hover .md\:group-hover\:blur-xl{
+    --tw-blur: blur(24px);
+  }
+
+  .group:hover .md\:group-hover\:blur-2xl{
+    --tw-blur: blur(40px);
+  }
+
+  .group:hover .md\:group-hover\:blur-3xl{
+    --tw-blur: blur(64px);
+  }
+
   .md\:brightness-0{
     --tw-brightness: brightness(0);
   }
@@ -129809,6 +129917,42 @@ html {
   }
 
   .lg\:blur-3xl{
+    --tw-blur: blur(64px);
+  }
+
+  .group:hover .lg\:group-hover\:blur-0{
+    --tw-blur: blur(0);
+  }
+
+  .group:hover .lg\:group-hover\:blur-none{
+    --tw-blur: blur(0);
+  }
+
+  .group:hover .lg\:group-hover\:blur-sm{
+    --tw-blur: blur(4px);
+  }
+
+  .group:hover .lg\:group-hover\:blur{
+    --tw-blur: blur(8px);
+  }
+
+  .group:hover .lg\:group-hover\:blur-md{
+    --tw-blur: blur(12px);
+  }
+
+  .group:hover .lg\:group-hover\:blur-lg{
+    --tw-blur: blur(16px);
+  }
+
+  .group:hover .lg\:group-hover\:blur-xl{
+    --tw-blur: blur(24px);
+  }
+
+  .group:hover .lg\:group-hover\:blur-2xl{
+    --tw-blur: blur(40px);
+  }
+
+  .group:hover .lg\:group-hover\:blur-3xl{
     --tw-blur: blur(64px);
   }
 
@@ -162173,6 +162317,42 @@ html {
     --tw-blur: blur(64px);
   }
 
+  .group:hover .xl\:group-hover\:blur-0{
+    --tw-blur: blur(0);
+  }
+
+  .group:hover .xl\:group-hover\:blur-none{
+    --tw-blur: blur(0);
+  }
+
+  .group:hover .xl\:group-hover\:blur-sm{
+    --tw-blur: blur(4px);
+  }
+
+  .group:hover .xl\:group-hover\:blur{
+    --tw-blur: blur(8px);
+  }
+
+  .group:hover .xl\:group-hover\:blur-md{
+    --tw-blur: blur(12px);
+  }
+
+  .group:hover .xl\:group-hover\:blur-lg{
+    --tw-blur: blur(16px);
+  }
+
+  .group:hover .xl\:group-hover\:blur-xl{
+    --tw-blur: blur(24px);
+  }
+
+  .group:hover .xl\:group-hover\:blur-2xl{
+    --tw-blur: blur(40px);
+  }
+
+  .group:hover .xl\:group-hover\:blur-3xl{
+    --tw-blur: blur(64px);
+  }
+
   .xl\:brightness-0{
     --tw-brightness: brightness(0);
   }
@@ -194531,6 +194711,42 @@ html {
   }
 
   .\32xl\:blur-3xl{
+    --tw-blur: blur(64px);
+  }
+
+  .group:hover .\32xl\:group-hover\:blur-0{
+    --tw-blur: blur(0);
+  }
+
+  .group:hover .\32xl\:group-hover\:blur-none{
+    --tw-blur: blur(0);
+  }
+
+  .group:hover .\32xl\:group-hover\:blur-sm{
+    --tw-blur: blur(4px);
+  }
+
+  .group:hover .\32xl\:group-hover\:blur{
+    --tw-blur: blur(8px);
+  }
+
+  .group:hover .\32xl\:group-hover\:blur-md{
+    --tw-blur: blur(12px);
+  }
+
+  .group:hover .\32xl\:group-hover\:blur-lg{
+    --tw-blur: blur(16px);
+  }
+
+  .group:hover .\32xl\:group-hover\:blur-xl{
+    --tw-blur: blur(24px);
+  }
+
+  .group:hover .\32xl\:group-hover\:blur-2xl{
+    --tw-blur: blur(40px);
+  }
+
+  .group:hover .\32xl\:group-hover\:blur-3xl{
     --tw-blur: blur(64px);
   }
 
