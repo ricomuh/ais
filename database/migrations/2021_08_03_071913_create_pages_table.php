@@ -19,7 +19,7 @@ class CreatePagesTable extends Migration
             $table->string('slug')->unique();
             $table->bigInteger('views')->default(0);
             $table->foreignId('menu_id')->nullable()->constrained()->nullOnDelete();
-            $table->text('body');
+            $table->text('body')->nullable();
             $table->timestamps();
         });
     }
