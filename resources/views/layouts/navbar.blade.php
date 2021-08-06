@@ -8,7 +8,7 @@
                 @if ($menu->subMenuTitles->count())
                     <div x-data="{ open : false }" class="relative group"  @mouseleave="open = false">
                         <button @mouseover="open = true" id="{{ $menu->slug }}" href="{{ $menu->link }}" class="inline-flex text-primary font-semibold p-4 group-hover:bg-primary group-hover:text-secondary transition">{{ $menu->name }}</button>
-                        <div x-show="open" class="absolute origin-top-right right-0 top-full bg-white shadow-md flex flex-col divide-y divide-gray-200 rounded-tr-none"
+                        <div x-show="open" :class="{'flex' : open, 'hidden' : !open}" class="absolute origin-top-right right-0 top-full bg-white shadow-md hidden flex-col divide-y divide-gray-200 rounded-tr-none"
                         x-transition:enter="transition transform"
                         x-transition:enter-start="opacity-0 -translate-y-4"
                         x-transition:enter-end="opacity-100 translate-y-0"
@@ -44,7 +44,7 @@
                 <path :class="{'hidden': ! open, 'inline-flex': open }" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
             </svg>
         </button>
-        <div class="absolute w-full top-full bg-primary shadow-md flex flex-col" x-show="open">
+        <div class="absolute w-full top-full bg-primary shadow-md hidden flex-col" :class="{'flex' : open, 'hidden' : !open}" x-show="open">
             <div class="flex flex-col divide-y divide-secondary divide-opacity-50">
                 @foreach ($menus as $menu)
                     @if ($menu->subMenuTitles->count())    
