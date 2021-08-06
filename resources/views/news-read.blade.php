@@ -1,3 +1,6 @@
+@section('title', $post->title . ' | Aqobah International School Official Website')
+@section('description', substr($post->body, 0, 200) . '...')
+@section('image', asset('img/thumbnails/' . $post->thumbnail))
 <x-news-layout :title="$post->title" :bg="$post->thumbnail">
     <div class="flex flex-col space-y-8">
         <div class="flex justify-between items-center">

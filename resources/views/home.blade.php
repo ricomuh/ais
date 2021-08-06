@@ -1,7 +1,10 @@
+@section('title','Aqobah International School Official Website')
+@section('description','Welcome to Aqobah International School Official Website')
+@section('image', asset('img/header.svg'))
 <x-main-layout>
     <x-carousel id="main" :dots="true" :autoplay="2000" :nav="true" class="group">
         @foreach ($carousels as $carousel)
-            <div class="w-full relative overflow-hidden h-96 md:h-screen" style="">
+            <div class="w-full relative overflow-hidden" style="height: 36em;">
                 <img src="{{ asset('img/carousels/' . $carousel->filename) }}" alt="" class="w-full h-full object-cover absolute">
                 <div class="w-full h-full absolute bottom-0 bg-gradient-to-t from-black opacity-50 group-hover:opacity-80 transition duration-1000"></div>
                 <a href="{{ $carousel->link }}" class="w-full h-full flex flex-col justify-center items-center text-center absolute text-white">

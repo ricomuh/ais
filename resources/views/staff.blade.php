@@ -1,3 +1,6 @@
+@section('title', 'Aqobah International Staff')
+@section('description', 'Showing all of Aqobah International Staff')
+@section('image', asset('img/header.svg'))
 <x-page-layout title="Staff of Aqobah International School">
     <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
         @foreach ($staffList as $staff)

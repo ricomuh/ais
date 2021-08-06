@@ -1,3 +1,6 @@
+@section('title', $staff->name)
+@section('description', 'Aqobah International Staff as ' . $staff->structural_role)
+@section('image', asset('img/staff/' . $staff->photo))
 <x-page-layout :title="$staff->name">
     <div class="mb-8">
         <a href="{{ route('staff.index') }}" class="text-lg font-bold text-primary hover:text-primary-light"><i class="fas fa-arrow-left"></i> Back</a>
