@@ -9,5 +9,7 @@
         </h4>
         <p class="{{ $small ? 'text-xs' : 'text-sm' }} mt-2"><i class="fas fa-user"></i> {{ $post->user->name }} <i class="fas fa-calendar ml-2"></i> {{ $post->created_at->format('d F Y') }}</p>
     </div>
-    <div class="absolute bg-black group-hover:bg-primary-dark transition duration-300 right-0 top-4 text-white px-3 py-1 font-semibold {{ $small ? 'text-sm' : 'text-base' }}">{{ $post->tag->name }}</div>
+    @if ($post->tag)
+        <div class="absolute bg-black group-hover:bg-primary-dark transition duration-300 right-0 top-4 text-white px-3 py-1 font-semibold {{ $small ? 'text-sm' : 'text-base' }}">{{ $post->tag->name }}</div>
+    @endif
 </a>

@@ -11,9 +11,11 @@
                 <div class="font-semibold text-sm text-gray-500">
                     <i class="fas fa-user"></i> {{ $post->user->name }} <i class="fas fa-calendar ml-2"></i> {{ $post->created_at->format('d F Y') }}
                 </div>
-                <div>
-                    <a href="{{ route('news.tag', $post->tag->slug) }}" class="text-sm bg-primary text-secondary hover:bg-primary-light hover:text-secondary-light px-2 py-1 rounded"><i class="fas fa-tag"></i> {{ $post->tag->name }}</a>
-                </div>
+                @if ($post->tag)
+                    <div>
+                        <a href="{{ route('news.tag', $post->tag->slug) }}" class="text-sm bg-primary text-secondary hover:bg-primary-light hover:text-secondary-light px-2 py-1 rounded"><i class="fas fa-tag"></i> {{ $post->tag->name }}</a>
+                    </div>
+                @endif
                 <div class="text-sm text-gray-700">
                     {{ substr($post->body, 0, 100) }}... <a href="{{ route('news.read', $post->slug) }}" class="text-primary hover:text-primary-light font-semibold">Read More...</a>
                 </div>
