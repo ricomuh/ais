@@ -4,6 +4,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\StaffPageController;
+use App\Http\Controllers\TagController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -34,8 +35,12 @@ Route::group(['prefix' => '/staff', 'as' => 'staff.'], function () {
     Route::get('/{staff}', [StaffPageController::class, 'show'])->name('detail');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::group(['middleware' => 'auth', 'prefix' => '/dashboard'], function () {
+    Route::view('/', 'dashboard')->name('dashboard');
+
+    Route::group(['as' => 'dashboard.'], function () {
+        Route::resource('/tags', TagController::class);
+    });
+});
 
 require __DIR__ . '/auth.php';
