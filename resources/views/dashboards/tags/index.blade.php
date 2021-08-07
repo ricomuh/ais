@@ -5,6 +5,7 @@
         <x-dashboard-form :route="route('dashboard.tags.store')">
             <x-dashboard-input name="name" />
         </x-dashboard-form>
+        <a href="{{ route('dashboard.featuredTags.index') }}" class="text-blue-500 hover:text-blue-400 hover:underline transition duration-300">Edit Featured Tags</a>
     </div>
     <div class="flex flex-col divide-y divide-gray-500">
         @foreach ($tags as $tag)
