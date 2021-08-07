@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FaqController;
 use App\Http\Controllers\FeaturedTagController;
 use App\Http\Controllers\FooterLinkController;
 use App\Http\Controllers\HomeController;
@@ -44,6 +45,7 @@ Route::group(['middleware' => 'auth', 'prefix' => '/dashboard'], function () {
         Route::resource('/tags', TagController::class);
         Route::resource('/featuredTags', FeaturedTagController::class);
         Route::resource('/footerLinks', FooterLinkController::class);
+        Route::resource('/faqs', FaqController::class);
     });
 });
 

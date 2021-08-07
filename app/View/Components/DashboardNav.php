@@ -28,6 +28,7 @@ class DashboardNav extends Component
             ['name' => 'Tags', 'route' => 'dashboard.tags.index'],
             ['name' => 'Featured Tags', 'route' => 'dashboard.featuredTags.index'],
             ['name' => 'Footer Links', 'route' => 'dashboard.footerLinks.index'],
+            ['name' => 'Faqs', 'route' => 'dashboard.faqs.index'],
         ];
 
         return view('layouts.navigation', compact('menus'));
