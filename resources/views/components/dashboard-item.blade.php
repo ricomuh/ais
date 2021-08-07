@@ -1,6 +1,6 @@
 @props(['items' => [], 'update', 'deleteRoute', 'iteration'])
 
-<div class="flex flex-col" x-data="{ open : false }">
+<div class="flex flex-col" x-data="{ open : false }" @click.away="open = false">
     <div class="flex flex-row space-x-5 py-2">
         <div class="w-5 flex flex-row items-center justify-center">
             {{ $iteration }}

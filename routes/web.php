@@ -5,8 +5,11 @@ use App\Http\Controllers\FeaturedTagController;
 use App\Http\Controllers\FooterLinkController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LandingPageController;
+use App\Http\Controllers\MenuController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\StaffPageController;
+use App\Http\Controllers\SubMenuController;
+use App\Http\Controllers\SubMenuTitleController;
 use App\Http\Controllers\TagController;
 use Illuminate\Support\Facades\Route;
 
@@ -46,6 +49,9 @@ Route::group(['middleware' => 'auth', 'prefix' => '/dashboard'], function () {
         Route::resource('/featuredTags', FeaturedTagController::class);
         Route::resource('/footerLinks', FooterLinkController::class);
         Route::resource('/faqs', FaqController::class);
+        Route::resource('/menus', MenuController::class);
+        Route::resource('/subMenuTitles', SubMenuTitleController::class);
+        Route::resource('/subMenus', SubMenuController::class);
     });
 });
 
