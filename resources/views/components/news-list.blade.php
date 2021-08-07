@@ -17,7 +17,7 @@
                     </div>
                 @endif
                 <div class="text-sm text-gray-700">
-                    {{ substr($post->body, 0, 100) }}... <a href="{{ route('news.read', $post->slug) }}" class="text-primary hover:text-primary-light font-semibold">Read More...</a>
+                    {{ substr(strip_tags($post->body), 0, 100) }}... <a href="{{ route('news.read', $post->slug) }}" class="text-primary hover:text-primary-light font-semibold">Read More...</a>
                 </div>
             </div>
         </div>
