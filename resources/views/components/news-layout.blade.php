@@ -11,10 +11,10 @@
             <div class="bg-black absolute w-full h-full bg-opacity-50"></div>
         @endif
         <div class="w-10/12 mx-auto py-32 relative">
-            <h1 class="text-3xl text-secondary font-bold tracking-widest text-center">{{ $title }}</h1>
+            <h1 class="text-3xl text-secondary font-bold leading-none tracking-widest text-center">{{ $title }}</h1>
         </div>
     </div>
-    <div class="my-16 w-10/12 mx-auto leading-loose flex flex-col md:flex-row gap-8">
+    <div class="my-16 w-10/12 mx-auto flex flex-col md:flex-row gap-8">
         <div class="md:w-4/6 w-full">
             {{ $slot }}
         </div>

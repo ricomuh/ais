@@ -2,7 +2,7 @@
     <h2 class="text-lg font-bold text-primary">Search News</h2>
     <form action="{{ route('news.search') }}" method="get" class="flex space-x-2">
         <input type="text" name="query" id="search" placeholder="Search news..." class="px-2 py-1 bg-white hover:bg-gray-50 rounded-md border border-primary focus:border-primary-light focus:ring-2 focus:ring-opacity-50 focus:ring-primary focus:outline-none text-sm transition duration-300 flex-grow">
-        <button type="submit" class="bg-primary text-secondary hover:bg-primary-light hover:text-secondary-light focus:outline-none focus:ring-2 focus:ring-opacity-50 focus:ring-primary px-2 py-1 text-sm rounded-md transition duration-300">Search <i class="fas fa-search"></i></button>
+        <button type="submit" class="bg-primary text-secondary hover:bg-primary-light hover:text-secondary-light focus:outline-none focus:ring-2 focus:ring-opacity-50 focus:ring-primary px-4 py-1 text-sm rounded-md transition duration-300">Search <i class="fas fa-search"></i></button>
     </form>
     <h2 class="text-lg font-bold text-primary">Popular News</h2>
     <div class="flex flex-col">

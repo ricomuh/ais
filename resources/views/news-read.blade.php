@@ -3,7 +3,7 @@
 @section('image', asset('img/thumbnails/' . $post->thumbnail))
 <x-news-layout :title="$post->title" :bg="$post->thumbnail">
     <div class="flex flex-col space-y-8">
-        <div class="flex justify-between items-center">
+        <div class="flex flex-col md:flex-row gap-4 justify-between md:items-center items-start">
             <a href="{{ route('news.tag', $post->tag->slug) }}" class="flex space-x-2 text-sm bg-primary text-secondary hover:bg-primary-light hover:text-secondary-light transition duration-300 px-4 py-2 rounded-md shadow-md items-center">
                 <i class="fas fa-tag"></i> <span class="">{{ $post->tag->name }}</span>
             </a>
