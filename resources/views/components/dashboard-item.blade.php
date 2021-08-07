@@ -5,12 +5,11 @@
         <div class="w-5 flex flex-row items-center justify-center">
             {{ $iteration }}
         </div>
-        <div class="grid grid-cols-{{ count($items) }} flex-grow">
+        <div class="grid grid-cols-1 md:grid-cols-{{ count($items) }} flex-grow">
             @foreach ($items as $key => $value)
-                <div class="flex flex-col col-span-1">
-                    <div class="font-bold text-gray-600 text-sm">{{ $key }}</div>
-                    <div class="text-gray-800">{{ $value }}</div>
-                </div>
+                <x-dashboard-detail :title="$key">
+                    {{ $value }}
+                </x-dashboard-detail>
             @endforeach
         </div>
         <div class="flex-shrink-0">
