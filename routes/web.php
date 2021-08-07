@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CarouselController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\FeaturedTagController;
 use App\Http\Controllers\FooterLinkController;
@@ -52,6 +53,7 @@ Route::group(['middleware' => 'auth', 'prefix' => '/dashboard'], function () {
         Route::resource('/menus', MenuController::class);
         Route::resource('/subMenuTitles', SubMenuTitleController::class);
         Route::resource('/subMenus', SubMenuController::class);
+        Route::resource('/carousels', CarouselController::class);
     });
 });
 
