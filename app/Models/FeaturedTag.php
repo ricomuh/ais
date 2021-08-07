@@ -11,7 +11,7 @@ class FeaturedTag extends Model
 
     public $timestamps = false;
 
-    protected $fillable = ['title', 'tag_id'];
+    protected $fillable = ['title', 'tag_id', 'icon_class'];
 
     public function tag()
     {

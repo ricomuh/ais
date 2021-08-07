@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\FeaturedTagController;
+use App\Http\Controllers\FooterLinkController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\NewsController;
@@ -40,6 +42,8 @@ Route::group(['middleware' => 'auth', 'prefix' => '/dashboard'], function () {
 
     Route::group(['as' => 'dashboard.'], function () {
         Route::resource('/tags', TagController::class);
+        Route::resource('/featuredTags', FeaturedTagController::class);
+        Route::resource('/footerLinks', FooterLinkController::class);
     });
 });
 
