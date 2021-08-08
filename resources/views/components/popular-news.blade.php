@@ -13,7 +13,7 @@
                 </div>
                 <div class="col-span-3 flex flex-col">
                     <div class="font-bold text-primary group-hover:text-primary-dark transition duration-300 leading-tight">{{ $post->title }}</div>
-                    <p class="text-sm leading-tight">{{ substr(strip_tags($post->body), 0, 40) }}...</p>
+                    <p class="text-sm leading-tight">{{ Str::words(strip_tags($post->body), 5, '...') }}</p>
                     <div>
                         <span class="bg-primary rounded px-2 py-1 text-sm text-white"><i class="fas fa-eye"></i> {{ $post->views }}</span>
                     </div>
