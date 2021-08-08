@@ -3,6 +3,7 @@
 namespace App\Helper;
 
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Str;
 
 class Uploader
 {
@@ -21,7 +22,7 @@ class Uploader
 
     public static function deleteWhenExist($filename, $folder)
     {
-        if (substr($filename, 0, strlen(self::prefix())) == self::prefix()) {
+        if (Str::startsWith($filename, self::prefix())) {
             $filepath = public_path() . '/' . $folder . '/' . $filename;
             if (File::exists($filepath)) {
                 File::delete($filepath);
