@@ -77,7 +77,7 @@ class PageController extends Controller
     {
         $menus = Menu::all();
 
-        return view('dashboards.pages.edit', compact('pages', 'menus'));
+        return view('dashboards.pages.edit', compact('page', 'menus'));
     }
 
     /**
@@ -115,6 +115,6 @@ class PageController extends Controller
     {
         $page->delete();
 
-        return redirect()->route('dashboard.pages.index')->with('Page successfully deleted');
+        return redirect()->route('dashboard.pages.index')->with('message', 'Page successfully deleted');
     }
 }
