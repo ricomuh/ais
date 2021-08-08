@@ -14,7 +14,7 @@ class StaffPageController extends Controller
      */
     public function index()
     {
-        $staffList = Staff::all();
+        $staffList = Staff::latest()->get();
 
         return view('staff', compact('staffList'));
     }
