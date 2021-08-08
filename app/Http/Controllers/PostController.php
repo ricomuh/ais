@@ -17,7 +17,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::all();
+        $posts = Post::latest()->paginate(10);
 
         return view('dashboards.posts.index', compact('posts'));
     }
@@ -125,6 +125,8 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
+        Uploader::deleteWhenExist($post->thumbnail, 'img/thumbnails');
+
         $post->delete();
 
         return redirect()->route('dashboard.posts.index')->with('message', 'Post successfully deleted');
