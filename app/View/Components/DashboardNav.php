@@ -26,6 +26,7 @@ class DashboardNav extends Component
         $menus = [
             ['name' => 'Dashboard', 'route' => 'dashboard'],
             ['name' => 'Menus', 'route' => 'dashboard.menus.index'],
+            ['name' => 'Pages', 'route' => 'dashboard.pages.index'],
             ['name' => 'Tags', 'route' => 'dashboard.tags.index'],
             ['name' => 'Footer Links', 'route' => 'dashboard.footerLinks.index'],
             ['name' => 'Faqs', 'route' => 'dashboard.faqs.index'],
