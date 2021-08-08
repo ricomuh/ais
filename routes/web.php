@@ -8,6 +8,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\StaffController;
 use App\Http\Controllers\StaffPageController;
 use App\Http\Controllers\SubMenuController;
 use App\Http\Controllers\SubMenuTitleController;
@@ -54,6 +55,7 @@ Route::group(['middleware' => 'auth', 'prefix' => '/dashboard'], function () {
         Route::resource('/subMenuTitles', SubMenuTitleController::class);
         Route::resource('/subMenus', SubMenuController::class);
         Route::resource('/carousels', CarouselController::class);
+        Route::resource('/staff', StaffController::class);
     });
 });
 

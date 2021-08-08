@@ -25,11 +25,12 @@ class DashboardNav extends Component
     {
         $menus = [
             ['name' => 'Dashboard', 'route' => 'dashboard'],
+            ['name' => 'Menus', 'route' => 'dashboard.menus.index'],
             ['name' => 'Tags', 'route' => 'dashboard.tags.index'],
             ['name' => 'Footer Links', 'route' => 'dashboard.footerLinks.index'],
             ['name' => 'Faqs', 'route' => 'dashboard.faqs.index'],
-            ['name' => 'Menus', 'route' => 'dashboard.menus.index'],
             ['name' => 'Carousels', 'route' => 'dashboard.carousels.index'],
+            ['name' => 'Staff', 'route' => 'dashboard.staff.index'],
         ];
 
         return view('layouts.navigation', compact('menus'));
