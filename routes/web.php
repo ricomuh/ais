@@ -10,6 +10,7 @@ use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\StaffController;
 use App\Http\Controllers\StaffPageController;
 use App\Http\Controllers\SubMenuController;
@@ -61,6 +62,7 @@ Route::group(['middleware' => 'auth', 'prefix' => '/dashboard'], function () {
         Route::resource('/carousels', CarouselController::class);
         Route::resource('/staff', StaffController::class);
         Route::resource('/pages', PageController::class);
+        Route::resource('/posts', PostController::class);
     });
 });
 
