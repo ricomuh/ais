@@ -27,15 +27,11 @@
                 <div class="flex flex-col space-y-2">
                     <h5 class="font-bold text-base text-secondary"><i class="fas fa-hand-point-down"></i> Keep in touch</h5>
                     <div class="grid grid-cols-4 gap-2">
-                        <a href="#" class="bg-blue-500 hover:bg-blue-600 transition duration-300 w-full rounded-md text-center shadow py-2"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="bg-purple-500 hover:bg-purple-600 transition duration-300 w-full rounded-md text-center shadow py-2"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="bg-red-500 hover:bg-red-600 transition duration-300 w-full rounded-md text-center shadow py-2"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.facebook.com/aqobahinternational/" class="bg-blue-500 hover:bg-blue-600 transition duration-300 w-full rounded-md text-center shadow py-2"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/aqobahinternational/" class="bg-purple-500 hover:bg-purple-600 transition duration-300 w-full rounded-md text-center shadow py-2"><i class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com/channel/UCcJ-ZCKCIDfmNFrOA6pC_Wg" class="bg-red-500 hover:bg-red-600 transition duration-300 w-full rounded-md text-center shadow py-2"><i class="fab fa-youtube"></i></a>
                         <a href="#" class="bg-green-500 hover:bg-green-600 transition duration-300 w-full rounded-md text-center shadow py-2"><i class="fab fa-whatsapp"></i></a>
                     </div>
-                    {{-- <a href="#" class="bg-green-500 hover:bg-blue-600 transition duration-300 w-full rounded-md text-center shadow py-2 text-sm"><i class="fab fa-facebook"></i> Facebook</a>
-                    <a href="#" class="bg-purple-500 hover:bg-purple-600 transition duration-300 w-full rounded-md text-center shadow py-2 text-sm"><i class="fab fa-instagram"></i> Instagram</a>
-                    <a href="#" class="bg-red-500 hover:bg-red-600 transition duration-300 w-full rounded-md text-center shadow py-2 text-sm"><i class="fab fa-youtube"></i> Youtube</a>
-                    <a href="#" class="bg-green-500 hover:bg-green-600 transition duration-300 w-full rounded-md text-center shadow py-2 text-sm"><i class="fab fa-whatsapp"></i> Whatsapp</a> --}}
                 </div>
             </div>
         </div>
