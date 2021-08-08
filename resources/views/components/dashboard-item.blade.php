@@ -12,16 +12,20 @@
                 </x-dashboard-detail>
             @endforeach
         </div>
-        <div class="flex-shrink-0">
-            <x-button @click="open = ! open" >Edit</x-button>
-            <form action="{{ $deleteRoute }}" method="post" class="flex">
-                @method('DELETE')
-                @csrf
-                <x-button class="bg-red-600 hover:bg-red-700 flex">Delete</x-button>
-            </form>
+        @isset($update)
+            <div class="flex-shrink-0">
+                <x-button @click="open = ! open" >Edit</x-button>
+                <form action="{{ $deleteRoute }}" method="post" class="flex">
+                    @method('DELETE')
+                    @csrf
+                    <x-button class="bg-red-600 hover:bg-red-700 flex">Delete</x-button>
+                </form>
+            </div>
+        @endisset
+    </div>
+    @isset($update)
+        <div class="bg-blue-50 p-5" x-show="open">
+            {{ $update }}
         </div>
-    </div>
-    <div class="bg-blue-50 p-5" x-show="open">
-        {{ $update }}
-    </div>
+    @endisset
 </div>
