@@ -5,6 +5,7 @@ use App\Http\Controllers\FaqController;
 use App\Http\Controllers\FeaturedTagController;
 use App\Http\Controllers\FooterLinkController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ImageUploadController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\NewsController;
@@ -47,7 +48,9 @@ Route::group(['prefix' => '/staff', 'as' => 'staff.'], function () {
 Route::group(['middleware' => 'auth', 'prefix' => '/dashboard'], function () {
     Route::view('/', 'dashboard')->name('dashboard');
 
+
     Route::group(['as' => 'dashboard.'], function () {
+        Route::post('/uploadImg', ImageUploadController::class)->name('uploadImg')->withoutMiddleware('auth');
         Route::resource('/tags', TagController::class);
         Route::resource('/featuredTags', FeaturedTagController::class);
         Route::resource('/footerLinks', FooterLinkController::class);
