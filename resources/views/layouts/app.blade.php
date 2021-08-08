@@ -33,5 +33,7 @@
                 {{ $slot }}
             </main>
         </div>
+        <script src="{{ asset('js/jquery.min.js') }}"></script>
+        @stack('custom-script')
     </body>
 </html>
