@@ -46,7 +46,7 @@ class CarouselController extends Controller
         ]);
 
         $file = $request->file('thumbnail');
-        $filename = Uploader::upload($file, 'img/carousels', $file->getBasename());
+        $filename = Uploader::upload($file, 'img/carousels', $request->title);
 
         Carousel::create([
             'title' => $request->title,
@@ -86,14 +86,14 @@ class CarouselController extends Controller
 
         if ($request->hasFile('thumbnail')) {
             $file = $request->file('thumbnail');
-            $filename = Uploader::upload($file, 'img/carousels', $file->getBasename());
-            Uploader::deleteWhenExist($request->filename, 'img/carousels');
+            $filename = Uploader::upload($file, 'img/carousels', $request->title);
+            Uploader::deleteWhenExist($carousel->filename, 'img/carousels');
         }
 
         $carousel->update([
             'title' => $request->title,
             'link' => $request->link,
-            'description' => $request->title,
+            'description' => $request->description,
             'filename' => $filename ?? $carousel->filename,
         ]);
 
