@@ -4,9 +4,11 @@
 <x-news-layout :title="$post->title" :bg="$post->thumbnail">
     <div class="flex flex-col space-y-8">
         <div class="flex flex-col md:flex-row gap-4 justify-between md:items-center items-start">
-            <a href="{{ route('news.tag', $post->tag->slug) }}" class="flex space-x-2 text-sm bg-primary text-secondary hover:bg-primary-light hover:text-secondary-light transition duration-300 px-4 py-2 rounded-md shadow-md items-center">
-                <i class="fas fa-tag"></i> <span class="">{{ $post->tag->name }}</span>
-            </a>
+            @if ($post->tag)    
+                <a href="{{ route('news.tag', $post->tag->slug) }}" class="flex space-x-2 text-sm bg-primary text-secondary hover:bg-primary-light hover:text-secondary-light transition duration-300 px-4 py-2 rounded-md shadow-md items-center">
+                    <i class="fas fa-tag"></i> <span class="">{{ $post->tag->name }}</span>
+                </a>
+            @endif
             <div class="flex space-x-2 items-center">
                 <span>Share: </span> 
                 <a target="_blank" href="https://api.whatsapp.com/send?text={{ $post->title }} {{ url()->current() }}" class="bg-green-500 hover:bg-green-600 transition duration-300 rounded-full w-10 h-10 text-lg flex items-center justify-center text-white shadow hover:shadow-md"><i class="fab fa-whatsapp"></i></a>
