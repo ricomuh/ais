@@ -2,7 +2,7 @@
 @section('description', 'Showing all of Aqobah International Staff')
 @section('image', asset('img/header.svg'))
 <x-page-layout title="Staff of Aqobah International School">
-    <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
         @foreach ($staffList as $staff)
             <a href="{{ route('staff.detail', $staff->id) }}" class="flex flex-col items-center space-y-2 group">
                 <div class="inline-flex relative overflow-hidden shadow-md transition duration-300 rounded-full h-36 w-36">
