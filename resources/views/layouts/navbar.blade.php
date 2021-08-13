@@ -18,10 +18,10 @@
                         >
                             @foreach ($menu->subMenuTitles as $subMenuTitle)
                                 <div class="flex flex-col">
-                                    <a href="{{ $subMenuTitle->link }}" class="font-semibold px-4 py-1 inline-flex hover:bg-primary hover:text-white min-w-max">{{ $subMenuTitle->name }}</a>
+                                    <a href="{{ $subMenuTitle->link }}" class="font-semibold px-4 py-1 inline-flex hover:bg-primary hover:text-white min-w-max m-0.5">{{ $subMenuTitle->name }}</a>
                                     <div class="flex flex-col">
                                         @foreach ($subMenuTitle->subMenus as $subMenu)
-                                            <a href="{{ $subMenu->link }}" class="py-1 px-4 min-w-max hover:bg-primary-light hover:text-white">{{ $subMenu->name }}</a>
+                                            <a href="{{ $subMenu->link }}" class="py-1 px-4 min-w-max hover:bg-primary-light hover:text-white m-0.5">{{ $subMenu->name }}</a>
                                         @endforeach
                                     </div>
                                 </div>
@@ -45,18 +45,18 @@
             </svg>
         </button>
         <div class="absolute w-full top-full bg-primary shadow-md hidden flex-col" :class="{'flex' : open, 'hidden' : !open}" x-show="open">
-            <div class="flex flex-col divide-y divide-secondary divide-opacity-50">
+            <div class="flex flex-col divide-y divide-secondary divide-opacity-20">
                 @foreach ($menus as $menu)
                     @if ($menu->subMenuTitles->count())    
                         <div x-data="{ selected : false }" class="flex flex-col items-center">
-                            <button class="text-secondary font-bold py-2 text-lg w-full" :class="{'bg-primary-dark' : selected}" @click="selected = !selected" @click.away="selected = false" >{{ $menu->name }}</button>
+                            <button class="text-secondary font-bold py-2 text-lg w-full text-left pl-8" :class="{'bg-primary-dark border-b border-primary' : selected}" @click="selected = !selected" @click.away="selected = false" >{{ $menu->name }}</button>
                             <div class="flex flex-col w-full bg-primary-dark pb-2" x-show="selected">
                                 @foreach ($menu->subMenuTitles as $subMenuTitle)
-                                    <div class="flex flex-col items-center">
-                                        <a href="{{ $subMenuTitle->link }}" class="font-semibold inline-flex text-white">{{ $subMenuTitle->name }}</a>
-                                        <div class="flex flex-col items-center">
+                                    <div class="flex flex-col items-start pl-16">
+                                        <a href="{{ $subMenuTitle->link }}" class="font-semibold inline-flex text-white py-2">{{ $subMenuTitle->name }}</a>
+                                        <div class="flex flex-col items-start">
                                             @foreach ($subMenuTitle->subMenus as $subMenu)
-                                                <a href="{{ $subMenu->link }}" class="text-white">{{ $subMenu->name }}</a>
+                                                <a href="{{ $subMenu->link }}" class="text-white py-2 pl-2">{{ $subMenu->name }}</a>
                                             @endforeach
                                         </div>
                                     </div>
@@ -64,7 +64,7 @@
                             </div>
                         </div>
                     @else 
-                        <a href="{{ $menu->link }}" class="text-secondary font-bold py-2 text-lg w-full text-center">{{ $menu->name }}</a>
+                        <a href="{{ $menu->link }}" class="text-secondary font-bold py-2 text-lg w-full text-left pl-8">{{ $menu->name }}</a>
                     @endif
                 @endforeach
             </div>

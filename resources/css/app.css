@@ -14,9 +14,6 @@
     .animate {
         visibility: hidden;
     }
-    .animate-from-left, .animate-from-right, .animate-from-bottom {
-        visibility: visible !important;
-    }
     html {
         scroll-behavior: smooth;
     }

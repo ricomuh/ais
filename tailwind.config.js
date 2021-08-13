@@ -29,7 +29,7 @@ module.exports = {
                     '100%': {transform: 'translateX(0em)',opacity:'100'},
                 },
                 'from-bottom': {
-                    '0%': {transform: 'translateY(2em)',opacity:'0'},
+                    '0%': {transform: 'translateY(5em)',opacity:'0'},
                     '100%': {transform: 'translateY(0em)',opacity:'100'},
                 }
             },

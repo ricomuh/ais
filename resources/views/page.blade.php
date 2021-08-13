@@ -10,12 +10,12 @@
                         <a href="{{ route('home') }}" class="text-secondary-dark">Home</a>
                         <svg class="h-5 w-auto text-gray-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
                     </li>
-                    @if ($page->menu_id !== null)
-                        <li class="inline-flex items-center" >
+                    @isset($page->menu_id)
+                        <li class="md:inline-flex items-center hidden" >
                             <a href="{{ route('home') }}" class="text-secondary-dark">{{ $page->menu->name }}</a>
                             <svg class="h-5 w-auto text-gray-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
                         </li>
-                    @endif
+                    @endisset
                     <li class="inline-flex items-center" >
                         <div class="text-secondary">{{ $page->title }}</div>
                     </li>
@@ -35,12 +35,12 @@
                     "background-position-y" : -$(window).scrollTop()/2.2
                 });
             });
-            @if ($page->menu_id !== null) {
+            @isset($page->menu_id) {
                 $("#{{ $page->menu->slug }}")
                     .removeClass("text-primary")
                     .addClass("text-secondary bg-primary")
             }
-            @endif
+            @endisset
         </script>
     @endpush
 </x-main-layout>

@@ -777,10 +777,6 @@ select{
   visibility: hidden;
 }
 
-.animate-from-left, .animate-from-right, .animate-from-bottom {
-  visibility: visible !important;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -11269,7 +11265,7 @@ html {
 
 @-webkit-keyframes from-bottom{
   0%{
-    transform: translateY(2em);
+    transform: translateY(5em);
     opacity: 0;
   }
 
@@ -11281,7 +11277,7 @@ html {
 
 @keyframes from-bottom{
   0%{
-    transform: translateY(2em);
+    transform: translateY(5em);
     opacity: 0;
   }
 
