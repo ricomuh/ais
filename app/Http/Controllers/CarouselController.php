@@ -39,9 +39,6 @@ class CarouselController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required',
-            'link' => 'required',
-            'description' => 'required',
             'thumbnail' => 'required',
         ]);
 
@@ -78,11 +75,6 @@ class CarouselController extends Controller
      */
     public function update(Request $request, Carousel $carousel)
     {
-        $request->validate([
-            'title' => 'required',
-            'link' => 'required',
-            'description' => 'required'
-        ]);
 
         if ($request->hasFile('thumbnail')) {
             $file = $request->file('thumbnail');
