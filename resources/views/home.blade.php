@@ -40,7 +40,7 @@
             <p class="text-lg text-white">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel ratione asperiores quibusdam odit magnam facere culpa porro ipsam ad doloremque.</p>
         </div>
         <div class="">
-            <a href="#" class="bg-green-700 hover:bg-green-600 transition duration-300 rounded-md px-4 py-2 text-lg text-white inline-flex items-center min-w-max hover:shadow-md animate transform group hover:pr-6" data-animate="animate-from-left">
+            <a href="https://admission.aqobahinternational.sch.id" class="bg-green-700 hover:bg-green-600 transition duration-300 rounded-md px-4 py-2 text-lg text-white inline-flex items-center min-w-max hover:shadow-md animate transform group hover:pr-6" data-animate="animate-from-left">
                 <span>Enroll Now</span><i class="fas fa-caret-right transform -translate-x-2 opacity-0 group-hover:translate-x-2 group-hover:opacity-100 transition duration-300"></i>
             </a>
         </div>
@@ -79,7 +79,7 @@
                         </a>
                         <p class="text-white"><b class="text-secondary">{{ $yt["items"][0]['statistics']['subscriberCount'] }}</b> Subscribers</p>
                         <script src="https://apis.google.com/js/platform.js"></script>
-                        <div class="g-ytsubscribe" data-channelid="UCikrCm-sl0pauu4tTtBqIXw" data-layout="default" data-count="default"></div>
+                        <div class="g-ytsubscribe" data-channelid="{{ $yt['items'][0]['id'] }}" data-layout="default" data-count="default"></div>
                     </div>
                 </div>
                 <p class="transform text-sm text-white">
