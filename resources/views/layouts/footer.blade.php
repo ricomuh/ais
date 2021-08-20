@@ -29,7 +29,7 @@
                     <div class="grid grid-cols-4 gap-2">
                         <a href="https://www.facebook.com/aqobahinternational/" class="bg-blue-500 hover:bg-blue-600 transition duration-300 w-full rounded-md text-center shadow py-2"><i class="fab fa-facebook"></i></a>
                         <a href="https://www.instagram.com/aqobahinternational/" class="bg-purple-500 hover:bg-purple-600 transition duration-300 w-full rounded-md text-center shadow py-2"><i class="fab fa-instagram"></i></a>
-                        <a href="https://youtube.com/channel/UCcJ-ZCKCIDfmNFrOA6pC_Wg" class="bg-red-500 hover:bg-red-600 transition duration-300 w-full rounded-md text-center shadow py-2"><i class="fab fa-youtube"></i></a>
+                        <a href="https://youtube.com/channel/UCikrCm-sl0pauu4tTtBqIXw" class="bg-red-500 hover:bg-red-600 transition duration-300 w-full rounded-md text-center shadow py-2"><i class="fab fa-youtube"></i></a>
                         <a href="#" class="bg-green-500 hover:bg-green-600 transition duration-300 w-full rounded-md text-center shadow py-2"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>

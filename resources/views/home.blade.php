@@ -79,7 +79,7 @@
                         </a>
                         <p class="text-white"><b class="text-secondary">{{ $yt["items"][0]['statistics']['subscriberCount'] }}</b> Subscribers</p>
                         <script src="https://apis.google.com/js/platform.js"></script>
-                        <div class="g-ytsubscribe" data-channelid="UCcJ-ZCKCIDfmNFrOA6pC_Wg" data-layout="default" data-count="default"></div>
+                        <div class="g-ytsubscribe" data-channelid="UCikrCm-sl0pauu4tTtBqIXw" data-layout="default" data-count="default"></div>
                     </div>
                 </div>
                 <p class="transform text-sm text-white">
