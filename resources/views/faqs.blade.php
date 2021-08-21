@@ -4,7 +4,8 @@
             <div class="flex flex-col space-y-2">
                 <h1 class="text-primary text-4xl font-bold">FAQs</h1>
                 <div class="text-primary-light text-xl font-semibold">Frequently Asked Questions</div>
-                <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid excepturi, reprehenderit sed, dolorum repellendus voluptatibus facilis error, autem dolorem et ipsam expedita culpa. Quam, deserunt voluptate minima consectetur aliquam tenetur.</div>
+                <div class="font-bold">Ingin tahu lebih banyak tentang kami?</div>
+                <div>Berikut ini merupakan beberapa pertanyaan yang sering muncul mengenai lembaga Aqobah International School (AIS). Disajikan juga pertanyaan-pertanyaan yang sering diajukan oleh wali santri mengenai keseharian aktifitas putra/putrinya di AIS.</div>
             </div>
         </div>
         <div class="flex-grow">

@@ -5,11 +5,11 @@
                 <div class="flex flex-col space-y-2 text-sm">
                     <div class="flex flex-col">
                         <h5 class="font-bold text-secondary text-base"><i class="fas fa-info-circle"></i> About Us</h5>
-                        <p>Aqobah International School adalah Pondok Pesantren berbasis International yang merupakan cabang ke-6 dari Pondok Pesantren Al-Aqobah Al-Hidayah.</p>
+                        <p>Aqobah International School (AIS) berusaha membantu setiap santri untuk menemukan potensi diri masing-masing. AIS juga berusaha, melalui berbagai program unggulannya, untuk mendorong dan mengembangkan potensi-potensi luar biasa dari setiap anak. Karena kami selalu meyakini bahwasannya setiap anak itu istimewa dan bisa menjadi juara.</p>
                     </div>
                     <div class="flex flex-col">
                         <h5 class="font-bold text-secondary text-base"><i class="fas fa-map-marked-alt"></i> Location</h5>
-                        <p>Desa Jombok Kec. Ngoro Jombang Jawa Timur (Jalan Raya Jombang-Malang)</p>
+                        <p>Jalan Bakalan 1, Dusun Ngasem, Area sawah, Jombok, Kec. Ngoro, Kabupaten Jombang, 61473</p>
                     </div>
                 </div>
             </div>

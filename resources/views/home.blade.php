@@ -25,7 +25,7 @@
 
                 <div class="md:w-1/2 w-full flex flex-col space-y-2 order-2 md:order-1 relative animate" data-animate="animate-from-left">
                     <img src="{{ asset('img/quote.png') }}" alt="" class="absolute opacity-50 filter blur-sm -left-8 -top-4">
-                    <p class="text-gray-800 transform">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptate accusamus odit tenetur dolorum? Vitae voluptatem a enim iure eos distinctio excepturi! Facere obcaecati blanditiis ex alias! Ex temporibus quas laboriosam vero maxime iure optio excepturi, quidem ullam tempore nulla id harum placeat aperiam corporis dolor, quia totam sunt quod!</p>
+                    <p class="text-gray-800 transform">Mendidik itu bukan membentuk, tapi menyiapkan bahan terbaik untuk saatnya siap menjadi sesuatu. Berikan kepercayaan dan apresiasi, maka kreatifitas anak akan tumbuh dan berkembang tidak terbatas. Pendampingan, aturan, dan motivasi itu secukupnya saja. Fokus saja pada kecerdasan masing-masing murid yang memang berbeda, sehingga ilmu yang diajarkan tidak menjadi "<em>Mubadzir</em>".</p>
                     <div class="flex flex-col">    
                         <h3 class="text-primary font-bold text-xl uppercase">KH. Junaidi Hidayat SH, S.Ag</h3>
                         <h4 class="text-primary-light font-bold text-lg uppercase">Pengasuh PonPes Al-Aqobah</h4>
@@ -36,12 +36,12 @@
     </div>
     <div class="w-10/12 mx-auto my-10 flex flex-col md:flex-row rounded-xl md:justify-between md:items-center md:px-20 md:py-10 px-10 py-5 shadow-lg gap-8" style="background-image: url({{ asset('img/pattern1.png') }}); ">
         <div class="flex flex-col">
-            <h2 class="text-3xl font-bold text-secondary">Lorem ipsum dolor sit amet.</h2>
-            <p class="text-lg text-white">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel ratione asperiores quibusdam odit magnam facere culpa porro ipsam ad doloremque.</p>
+            <h2 class="text-3xl font-bold text-secondary">Prosedur Pendaftaran Aqobah Internasional School</h2>
+            <p class="text-lg text-white">Tunggu apa lagi? Mari bergabung bersama kami dan persiapkan diri anda untuk selalu menjadi anak yang Istimewa dan Menjadi Juara!</p>
         </div>
         <div class="">
-            <a href="https://admission.aqobahinternational.sch.id" class="bg-green-700 hover:bg-green-600 transition duration-300 rounded-md px-4 py-2 text-lg text-white inline-flex items-center min-w-max hover:shadow-md animate transform group hover:pr-6" data-animate="animate-from-left">
-                <span>Enroll Now</span><i class="fas fa-caret-right transform -translate-x-2 opacity-0 group-hover:translate-x-2 group-hover:opacity-100 transition duration-300"></i>
+            <a href="https://admission.aqobahinternational.sch.id" class="bg-green-700 hover:bg-green-600 transition duration-300 rounded-md px-6 py-2 text-lg text-white inline-flex items-center min-w-max hover:shadow-md animate transform group" data-animate="animate-from-left">
+                <span>Daftar Sekarang</span><i class="fas fa-caret-right transform -translate-x-2 opacity-0 group-hover:translate-x-2 group-hover:opacity-100 transition duration-300"></i>
             </a>
         </div>
     </div>
@@ -55,7 +55,10 @@
                 <h3 class="text-xl font-bold text-primary-light">
                     Frequently Asked Questions
                 </h3>
-                <p class="mt-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo laborum inventore autem quas tenetur, laboriosam vitae delectus veniam repudiandae perferendis molestias illo impedit aliquam ipsam? Magni quis, debitis ea, expedita commodi odio illum officiis excepturi eum unde corrupti libero dolor. Nulla perferendis ea blanditiis. Molestiae maiores assumenda ut sint est.</p>
+                <p class="mt-5 font-bold">
+                    Ingin tahu lebih banyak tentang kami?
+                </p>
+                <p>Berikut ini merupakan beberapa pertanyaan yang sering muncul mengenai lembaga Aqobah International School (AIS). Disajikan juga pertanyaan-pertanyaan yang sering diajukan oleh wali santri mengenai keseharian aktifitas putra/putrinya di AIS.</p>
             </div>
             <div class="w-full md:w-3/5 flex flex-col space-y-2 relative animate" data-animate="animate-from-right">
                 <span class="absolute text-7xl bg-primary font-bold w-32 h-32 text-white flex justify-center items-center rounded-full -right-8 md:-right-14 filter opacity-70">?</span>
