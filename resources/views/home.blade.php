@@ -2,14 +2,15 @@
 @section('description','Welcome to Aqobah International School Official Website')
 @section('image', asset('img/header.svg'))
 <x-main-layout>
-    <x-carousel id="main" :dots="true" :autoplay="2000" :nav="true" class="group">
+    <div class="h-16 md:h-0"></div>
+    <x-carousel id="main" :dots="true" :autoplay="5000" :nav="true" class="group">
         @foreach ($carousels as $carousel)
-            <div class="w-full relative overflow-hidden" style="height: 36em;">
+            <div class="w-full relative overflow-hidden aspect-w-7 aspect-h-3">
                 <img src="{{ asset('img/carousels/' . $carousel->filename) }}" alt="" class="w-full h-full object-cover absolute">
                 <div class="w-full h-full absolute bottom-0 bg-gradient-to-t from-black opacity-50 group-hover:opacity-80 transition duration-1000"></div>
                 <a href="{{ $carousel->link }}" class="w-full h-full flex flex-col justify-center items-center text-center absolute text-white">
                     <h1 class="md:text-5xl text-2xl font-bold">{{ $carousel->title }}</h1>
-                    <h1 class="md:text-xl text-lg font-semibold max-w-2xl">{{ $carousel->description }}</h1>
+                    <h1 class="md:text-xl text-sm font-semibold max-w-2xl">{{ $carousel->description }}</h1>
                 </a>
             </div>
         @endforeach
