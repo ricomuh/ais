@@ -23,8 +23,8 @@
             <x-detail-item name="Jabatan Struktural" :value="$staff->structural_role" />
             <x-detail-item name="Jabatan Fungsional" :value="$staff->functional_role" />
             <x-detail-item name="Alamat" :value="$staff->address" />
-            <x-detail-item name="Edukasi Formal" :value="$staff->formal_educations" />
-            <x-detail-item name="Edukasi Nonformal" :value="$staff->nonformal_educations" />
+            <x-detail-item name="Pendidikan Formal" :value="$staff->formal_educations" />
+            <x-detail-item name="Pendidikan Nonformal" :value="$staff->nonformal_educations" />
             <x-detail-item name="Pengalaman" :value="$staff->experiences" />
             <x-detail-item name="Lain-lain" :value="$staff->publications" />
         </div>
