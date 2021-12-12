@@ -30,6 +30,7 @@ class HomeController extends Controller
         $posts = Post::latest()->take(6)->get();
         $featuredTags = FeaturedTag::all();
 
+        dd($ytVideo);
         return view('home', compact('carousels', 'yt', 'ytVideo', 'faqs', 'posts', 'featuredTags'));
     }
 }
