@@ -23,7 +23,6 @@ class HomeController extends Controller
         $yt = cache()->remember('yt', 60 * 60 * 6, function () {
             return Http::get('https://youtube.googleapis.com/youtube/v3/channels?part=snippet&part=statistics&id=UCikrCm-sl0pauu4tTtBqIXw&key=AIzaSyDhViTqsxB6CRrj9P8mAvo1RPshbgI2uPI')->collect();
         });
-        cache()->forget('ytVideo');
         $ytVideo = cache()->remember('ytVideo', 60 * 60 * 6, function () {
             return Http::get('https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=UCikrCm-sl0pauu4tTtBqIXw&maxResults=1&order=date&key=AIzaSyDhViTqsxB6CRrj9P8mAvo1RPshbgI2uPI&&type=video')->collect();
         });
@@ -31,7 +30,7 @@ class HomeController extends Controller
         $posts = Post::latest()->take(6)->get();
         $featuredTags = FeaturedTag::all();
 
-        dd($ytVideo);
+        //dd($ytVideo);
         return view('home', compact('carousels', 'yt', 'ytVideo', 'faqs', 'posts', 'featuredTags'));
     }
 }
