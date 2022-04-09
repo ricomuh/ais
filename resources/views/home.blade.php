@@ -70,34 +70,36 @@
             </div>
         </div>
     </div>
-
+    
     <div class="bg-primary" style="background-image: url({{ asset('img/bg2.png') }}); background-position-y: bottom; background-position-x: right; background-repeat: no-repeat">
-        <div class="w-10/12 mx-auto flex flex-col justify-center min-h-screen gap-8 md:flex-row md:justify-between md:items-center">
-            <div class="flex flex-col space-y-4 w-full md:w-1/2 relative animate" data-animate="animate-from-left">
-                <img src="{{ asset('img/ytlogo.png') }}" class="absolute filter blur-sm opacity-50 -left-12 top-16 animate-float" alt="">
-                <div class="flex flex-row items-center space-x-4 transform">
-                    <img src="{{ $yt['items'][0]['snippet']['thumbnails']['default']['url'] }}" class="rounded-full shadow-lg" alt="">
-                    <div class="flex flex-col">
-                        <a href="https://youtube.com/channel/{{ $yt['items'][0]['id'] }}" class="font-bold text-xl text-secondary-dark hover:text-secondary transition duration-300">
-                            {{ $yt['items'][0]['snippet']['localized']['title'] }}
-                        </a>
-                        <p class="text-white"><b class="text-secondary">{{ $yt["items"][0]['statistics']['subscriberCount'] }}</b> Subscribers</p>
-                        <script src="https://apis.google.com/js/platform.js"></script>
-                        <div class="g-ytsubscribe" data-channelid="{{ $yt['items'][0]['id'] }}" data-layout="default" data-count="default"></div>
+        @if (isset($yt['items'][0]['snippet']['thumbnails']['default']['url']) && isset($yt['items'][0]['id']))
+            <div class="w-10/12 mx-auto flex flex-col justify-center min-h-screen gap-8 md:flex-row md:justify-between md:items-center">
+                <div class="flex flex-col space-y-4 w-full md:w-1/2 relative animate" data-animate="animate-from-left">
+                    <img src="{{ asset('img/ytlogo.png') }}" class="absolute filter blur-sm opacity-50 -left-12 top-16 animate-float" alt="">
+                    <div class="flex flex-row items-center space-x-4 transform">
+                        <img src="{{ $yt['items'][0]['snippet']['thumbnails']['default']['url'] }}" class="rounded-full shadow-lg" alt="">
+                        <div class="flex flex-col">
+                            <a href="https://youtube.com/channel/{{ $yt['items'][0]['id'] }}" class="font-bold text-xl text-secondary-dark hover:text-secondary transition duration-300">
+                                {{ $yt['items'][0]['snippet']['localized']['title'] }}
+                            </a>
+                            <p class="text-white"><b class="text-secondary">{{ $yt["items"][0]['statistics']['subscriberCount'] }}</b> Subscribers</p>
+                            <script src="https://apis.google.com/js/platform.js"></script>
+                            <div class="g-ytsubscribe" data-channelid="{{ $yt['items'][0]['id'] }}" data-layout="default" data-count="default"></div>
+                        </div>
+                    </div>
+                    <p class="transform text-sm text-white">
+                        {{ $yt['items'][0]['snippet']['localized']['description'] }}
+                    </p>
+                </div>
+                <div class="w-full md:w-1/2 animate" data-animate="animate-from-right">
+                    <div class="shadow-md md:p-5 p-2 rounded-lg backdrop-filter backdrop-blur-md bg-white bg-opacity-20">
+                        <div class="aspect-w-16 aspect-h-9">
+                            <iframe width="640" height="360" src="https://www.youtube.com/embed/{{ $ytVideo["items"][0]['id']['videoId'] }}" allowfullscreen></iframe>
+                        </div>
                     </div>
                 </div>
-                <p class="transform text-sm text-white">
-                    {{ $yt['items'][0]['snippet']['localized']['description'] }}
-                </p>
             </div>
-            <div class="w-full md:w-1/2 animate" data-animate="animate-from-right">
-                <div class="shadow-md md:p-5 p-2 rounded-lg backdrop-filter backdrop-blur-md bg-white bg-opacity-20">
-                    <div class="aspect-w-16 aspect-h-9">
-                        <iframe width="640" height="360" src="https://www.youtube.com/embed/{{ $ytVideo["items"][0]['id']['videoId'] }}" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
+        @endif
 
         <div class="w-10/12 mx-auto min-h-screen py-32 flex flex-col justify-center animate" data-animate="animate-from-bottom">
             <h1 class="text-3xl font-bold text-secondary text-center mb-10" ><i class="fas fa-newspaper"></i> Latest News</h1>
